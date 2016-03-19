@@ -1,4 +1,4 @@
-#Simpl Font And Image generator
+#Simple Font And Image generator
 
 Simple scripts for generating bit fonts for STM32, AVR, Arduino or other MCU, game and etc.
 
@@ -28,12 +28,12 @@ Check this:
 
 * All chars must be in their cells
 * If cell is blue, that means it's height more then default and it was offseted up.
-* Check if white pixels isn't on cell outline 
+* Check if white pixels isn't on cell outline. Like this ![alt text](https://raw.githubusercontent.com/SL-RU/sfam_generator/master/screenshots/bad.png)
 
 If something wrong you can change anything in any image editor.
 
 Good font must be look like:
-
+![](https://raw.githubusercontent.com/SL-RU/sfam_generator/master/screenshots/normal.png)
 
 7) Generate code with:
 ```
@@ -41,6 +41,26 @@ python BitmapFontToCode.py
 ```
 
 8) DONE! Use this font wherever you want! For example:
+![](https://raw.githubusercontent.com/SL-RU/sfam_generator/master/screenshots/cons1.png)
+![](https://raw.githubusercontent.com/SL-RU/sfam_generator/master/screenshots/cons2.png)
 
-#How to use it with [my ssd1306 stm32 library](https://github.com/SL-RU/stm32libs/tree/master/HAL/ssd1306):
+#How to use font with [my ssd1306 stm32 library](https://github.com/SL-RU/stm32libs/tree/master/HAL/ssd1306):
 
+1) Add defenition in fonts.h
+![](https://raw.githubusercontent.com/SL-RU/sfam_generator/master/screenshots/keil2.png)
+
+2) Add generated font data to fonts.c and set params
+```
+const uint8_t customfont[] = {
+  //output_file text
+};
+FontDef_t custom_font = {
+	width,
+	height,
+	byte width, //in the end of output BitmapFontToCode.py
+	customfont
+};
+```
+![](https://raw.githubusercontent.com/SL-RU/sfam_generator/master/screenshots/keil1.png)
+
+Good luck!
