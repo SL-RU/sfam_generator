@@ -2,7 +2,7 @@
 
 Simple scripts for generating bit fonts for STM32, AVR, Arduino or other MCU, game and etc.
 
-#How to use
+#How to use Font Generator
 
 1) Install python 3.4 or newer
 
@@ -43,6 +43,16 @@ python BitmapFontToCode.py
 8) DONE! Use this font wherever you want! For example:
 ![](https://raw.githubusercontent.com/SL-RU/sfam_generator/master/screenshots/cons1.png)
 ![](https://raw.githubusercontent.com/SL-RU/sfam_generator/master/screenshots/cons2.png)
+
+#How to use Image generator:
+
+1) Edit "png" value in ImageToCode.py. That is a path to image.
+
+2) Generate code and file:
+```
+python ImageToCode.py
+```
+You can find usage of generated code here: https://github.com/SL-RU/stm32libs/blob/master/HAL/ssd1306/ssd1306.c in function void ssd1306_image(uint8_t *img, uint8_t x, uint8_t y)
 
 #How to use font with [my ssd1306 stm32 library](https://github.com/SL-RU/stm32libs/tree/master/HAL/ssd1306):
 
