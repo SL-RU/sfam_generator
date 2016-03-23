@@ -54,6 +54,8 @@ python ImageToCode.py
 ```
 You can find usage of generated code here: https://github.com/SL-RU/stm32libs/blob/master/HAL/ssd1306/ssd1306.c in function void ssd1306_image(uint8_t *img, uint8_t x, uint8_t y)
 
+Video: http://www.youtube.com/watch?v=g6N0J6xSCS0
+
 #How to use font with [my ssd1306 stm32 library](https://github.com/SL-RU/stm32libs/tree/master/HAL/ssd1306):
 
 1) Add defenition in fonts.h
