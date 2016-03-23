@@ -6,6 +6,7 @@ import math
 
 im = Image.open(bitmap_png)
 
+
 s = "uint8_t font[] = {\n"
 
 bytesinchar = 0
